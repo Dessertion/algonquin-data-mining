@@ -1,11 +1,15 @@
 from itertools import chain
+from itertools import repeat
+
+import json
 
 class Obj:
     
-    def getInfo(self):
+    def getInfoLength(self):
         raise NotImplementedError
 
-    def getMeta(self):
+    @staticmethod
+    def getMeta():
         raise NotImplementedError
 
     @staticmethod
@@ -16,20 +20,28 @@ class Obj:
         return None
 
     def __init__(self,string):
-        self.info = dict(zip(self.getInfo().keys(),""*len(self.getInfo().keys())))
+        self.info = dict(zip(self.getInfoLength().keys(),("" for _ in self.getInfoLength().keys())))
         counter = 0
-        for key,val in self.getInfo():
+        for key,val in self.getInfoLength().items():
             self.info[key] = string[counter:counter+val]
             counter+=val
 
-class Mammal(Obj):
+    def __repr__(self):
+        return str(self.info)
+
     def getInfo(self):
+        return self.info
+
+
+class Mammal(Obj):
+    def getInfoLength(self):
         return {"MML_ID":2,
         "MML_ACT":1,
         "MML_LOC":1,
         "MML_EVD":1}
     
-    def getMeta(self):
+    @staticmethod
+    def getMeta():
         return 0
     
     def __init__(self,string):
@@ -37,21 +49,22 @@ class Mammal(Obj):
 
 class Bird(Obj):
 
-    def getInfo(self):
+    def getInfoLength(self):
         return {
         "BIRD_ID":2,
         "BIRD_ACT":1,
         "BIRD_LOC":1,
         "BIRD_DIS":1}
 
-    def getMeta(self):
+    @staticmethod
+    def getMeta():
         return 1
 
     def __init__(self,string):
         Obj.__init__(self,string)
              
 class Tree(Obj):
-    def getInfo(self):
+    def getInfoLength(self):
         return {
         "TREE_ID":2,
         "TREE_PCT":1,
@@ -60,23 +73,26 @@ class Tree(Obj):
         "TREE_DEN":2
     }
 
-    def getMeta(self):
+    @staticmethod
+    def getMeta():
         return 2
 
     def __init__(self,string):
         Obj.__init__(self,string)
 
 class Rock(Obj):
-    def getInfo(self):
+    def getInfoLength(self):
         return {"SIM":1,
         "AVG_SIZE":2,
         "FW":1,
         "FF":1,
         "CVR":1,
         "ERSN":1,
-        "SHP":1}
+        "SHP":1,
+        "B_FIELD":2}
     
-    def getMeta(self):
+    @staticmethod
+    def getMeta():
         return 3
 
     def __init__(self,string):
@@ -119,7 +135,7 @@ class SSRF:
         "PAN_IMGS":2,
         "JOB":1,
         #now for page 2
-        "ROCK":(3,8),
+        "ROCK":(3,10),
         "TREE":(2,9),
         "BIRD":(1,5),
         "MAMMAL":(0,5),
@@ -132,13 +148,17 @@ class SSRF:
     ["SWT"]*2,["HYPRO"]*3,["SCDT"],["HYPRO"]*2,["STSL"]*6,["CST","STK"],["STSH"]*6,["NULL"]*6,["RBN","SHN"],["NULL"]*4,["WATER_HAB"],
     ["TDS"]*2,["TUR"]*2,["IMG"]*2,["ALB"]*10,["PAN_IMGS","IMG","DELTA"],["WCD"]*10,["WCV"]*10,["WIDTH"]*2,["IMG"]*5,["JOB"]*10,["IMG"]*6,["NEXT"]))
 
-    ORDER+=["AP","GTS","PG"] + list(chain(["ROCK","TREE",
+    ORDER+=["AP","GTS","PG","NEXT"] + list(chain(["ROCK","TREE",
     "BIRD","MAMMAL"]*9)) 
 
+    IONS = ["DO","PH","N3","N2","NH","PO","CH","HD","AK","SP"]
 
-    def __init__(self, filepath):
+    def __init__(self, filepath, debug=False):
         self.filepath = filepath
-        self.parsed_data = dict(zip(SSRF.INFO.keys(),[[]]*len(SSRF.INFO.keys())))
+        self.parsed_data = dict(zip(SSRF.INFO.keys(), ([] for _ in SSRF.INFO.keys())))
+        del self.parsed_data["NULL"]; del self.parsed_data["NEXT"]
+        self.debug = debug
+        self.read()
 
 
     def read(self):
@@ -146,43 +166,78 @@ class SSRF:
         with open(self.filepath,"r") as f:
             self.data = f.read().splitlines()
             itm = 0
-            for i in range(0,len(self.data)):
+            null = False
+            linen = 0
+            for line in self.data:
                 number = ""
                 count = 0
-                if self.data[i][0] == '~':
+                linen+=1
+                if line[0] == '~':
                     break
-                for j in range (0,len(self.data[i])):
-                    number+=self.data[i][j]
+                for char in line:
+                    number+=char
                     count+=1
+
+                    if self.debug and self.ORDER[itm] == "CST":
+                        breakpoint()
 
                     if self.ORDER[itm] == "NULL":
                         number = ""
                         count = 0
+                        itm+=1
+                        null = True
                         continue
+                    else:
+                        null = False
+
                     if self.ORDER[itm] == "NEXT":
+                        itm+=1
                         break
-                    if self.data[j] == "@":
-                        number =""
-                        count = 0
+                    if char == "@":
+                        if type(MAPPED_INFO[itm]) == tuple:
+                            if count>=MAPPED_INFO[itm][1]:
+                                itm+=1
+                                count = 0
+                                number =""  
+                        elif count>= MAPPED_INFO[itm]:
+                            itm+=1
+                            count =0
+                            number = ""
                         continue
                     if type(MAPPED_INFO[itm]) == tuple:
                         if count >= MAPPED_INFO[itm][1]:
-                            self.parsed_data[self.ORDER[itm]].append(Obj.getThing(number,MAPPED_INFO[itm][0]))
+                            if self.debug:
+                                print(self.ORDER[itm])
+                            if number.replace("0","").strip():
+                                self.parsed_data[self.ORDER[itm]].append(Obj.getThing(number,MAPPED_INFO[itm][0]))
                             count = 0
                             itm+=1
                             number=""
                     elif count >= MAPPED_INFO[itm]:
-                        print(self.ORDER[itm])
+                        if self.debug:
+                            print(self.ORDER[itm])
                         s = self.ORDER[itm]
                         self.parsed_data[s].append(number)
                         count = 0
                         itm+=1
                         number=""
-                    
-
+        ions = {}
+        linen0 = linen+1
+        while linen < len(self.data)-1:
+            linen+=1
+            #print(str(linen) + " " + self.data[linen])
+            ions[SSRF.IONS[linen-linen0]] = self.data[linen]
+        
+        self.parsed_data.update(ions)
+                
     def lol(self):
         return self.parsed_data
 
-a = SSRF(r"new\20-436.dat")
-a.read()
-print(a.lol())
+    
+    def toJSON(self):
+        ret = self.parsed_data
+        for key,value in ret.items():
+            if type(value) == list and value:
+                if issubclass(type(value[0]),Obj):
+                    ret[key] = list(x.getInfo() for x in value)
+        return json.dumps(ret)
