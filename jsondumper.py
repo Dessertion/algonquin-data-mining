@@ -12,8 +12,6 @@ for root, dirs, files in os.walk(r"./new"):
         with open("./jsons/" + f.split(".")[0] + ".json","w+") as new:
             txt = x.toJSON()
             ap = json.loads(txt)["AP"]
-            if len(ap) >= 2:
-                if ap[0] != ap[1]:
                     #breakpoint()
-                    print(f)
+            #print(f)
             new.write(x.toJSON())

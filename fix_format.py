@@ -6,8 +6,8 @@ pattern = re.compile("\d+")
 def searchNum(string):
     return pattern.search(string)
 
-def main():
-    os.makedirs("new",mode=0o777,exist_ok=True)
+def main(folder):
+    os.makedirs(folder,mode=0o777,exist_ok=True)
 
     for root, dirs, files in os.walk(r".\AHP_AP20\AHPDATA",topdown=False):
         for name in files:
@@ -16,39 +16,47 @@ def main():
                 #breakpoint()
                 f = open(namep,"r")
                 s = f.read()
-                for idx in range(0,len(s)):
-                    if idx%100 == 0:
-                         s = s[:idx] + "\n" + s[idx:]
+                lines = [s[i:i+99] for i in range(0,len(s),99)]
                 
-                f = open(".\\new\\" + name, "w+")
-                do = []
-                linen = 0
+                f = open("./" + folder + "/" + name, "w+")
+                ions = []
                 counter = 0
-                for string in s.splitlines():
+
+                ap = int(name.split("-")[0])
+
+                if ap <= 12:
+                    rep = "0"
+                else:
+                    rep = "@"
+                for linen, string in enumerate(lines):
                     if string.strip() == "" and linen not in range (1,19):
                         continue
-                    if linen in range(0,11):
-                        if "." in string:
-                            do.append(string[26:31])
+                    if linen in range(1,11):
+                        if "." in string[26:]:
+                            ions.append(string[26:].strip())
                         else:
-                            do.append("N/A")
-                        string = string[:26].replace(" ","@").replace("*","0")
+                            ions.append("N/A")
+                    if linen in range(0,11):
+                        if ap <= 12 and linen==10:
+                            string = string[:29].replace(" ",rep).replace("*","0")
+                        else:
+                            string = string[:26].replace(" ",rep).replace("*","0")
                     else:
-                        string = string[:29].replace(" ","@").replace("*","0")
-                    linen+=1
+                        string = string[:29].replace(" ",rep).replace("*","0")
+
+                    if linen == 10 and ap <= 12: #lol pesky randomass extra integer
+                        string = string[:8] + string[9:]
+
                     f.write(string + "\n")
-                    if int(name.split("-")[0]) <= 12:
-                        if linen == 11:
-                            f.write("@"*26 + "\n")
                     counter+=1
                 
                 f.write("~~~~\n")
-                for string in do:
-                    f.write(string.strip() + "\n")
+                for string in ions:
+                    f.write(string + "\n")
                     #counter+=1
                 
                 if counter < 20: # and name.split("-")[0]=="20":
                     print(name + " " + str(counter))
 
 if __name__=="__main__":
-    main()
+    main("new")
