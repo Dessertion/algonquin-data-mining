@@ -274,6 +274,6 @@ class SSRF:
             if type(value) == list and value:
                 if issubclass(type(value[0]),Thing):
                     ret[key] = list(x.getInfo() for x in value)
-                elif self.INFO[key] == 1:
+                elif self.order.count(key) == 1:
                     ret[key] = value[0]
         return json.dumps(ret,indent=2)
