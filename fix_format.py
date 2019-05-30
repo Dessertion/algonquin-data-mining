@@ -1,10 +1,14 @@
 import os
 import re
 
-pattern = re.compile("\d+")
+pattern1 = re.compile(r"\d+")
+pattern2 = re.compile(r"[^0-9\n@]")
 
 def searchNum(string):
-    return pattern.search(string)
+    return pattern1.search(string)
+
+def replaceNonNum(string):
+    return pattern2.sub("$",string)
 
 def main(folder):
     os.makedirs(folder,mode=0o777,exist_ok=True)
@@ -23,6 +27,7 @@ def main(folder):
                 counter = 0
 
                 ap = int(name.split("-")[0])
+                out = ""
 
                 if ap <= 12:
                     rep = "0"
@@ -47,14 +52,18 @@ def main(folder):
                     if linen == 10 and ap <= 12: #lol pesky randomass extra integer
                         string = string[:8] + string[9:]
 
-                    f.write(string + "\n")
+                    out += (string + "\n")
                     counter+=1
-                
-                f.write("~~~~\n")
+
+                out = replaceNonNum(out) #check for faulty numbers
+                out +=("~~~~\n")
                 for string in ions:
-                    f.write(string + "\n")
+                    out += (string + "\n")
                     #counter+=1
                 
+                
+                f.write(out)
+
                 if counter < 20: # and name.split("-")[0]=="20":
                     print(name + " " + str(counter))
 

@@ -1,1 +1,83 @@
-{"AP": ["10"], "GTS": ["800"], "PG": ["3"], "LST": [], "CC": [], "CT": [], "PRECIP": [], "WS": [], "WD": [], "LAND_HAB": [], "WATER_HAB": [], "SAT_HOG": [], "SAT_SUN": [], "SAT_SHA": [], "SWT": [], "HYPRO": [], "STSL": [], "STSH": [], "SCDT": [], "CST": [], "STK": [], "RBN": [], "SHN": [], "TDS": [], "TUR": [], "ALB": [], "DELTA": [], "WCD": [], "WCV": [], "WIDTH": [], "IMG": ["1832", "4200", "0000", "0000"], "PAN_IMGS": [], "JOB": [], "ROCK": [{"SIM": "2", "AVG_SIZE": "04", "FW": "0", "FF": "0", "CVR": "0", "ERSN": "2", "SHP": "6", "B_FIELD": "04"}], "TREE": [{"TREE_ID": "45", "TREE_PCT": "8", "TREE_DIA": "04", "TREE_HT": "02", "TREE_DEN": "01"}], "BIRD": [{"BIRD_ID": "06", "BIRD_ACT": "4", "BIRD_LOC": "1", "BIRD_DIS": "1"}], "MAMMAL": [], "DO": "9.03", "PH": "5.36", "N3": "0.143", "N2": "2.667", "NH": "1.085", "PO": "0.115", "CH": "505.0", "HD": "564.1", "AK": "6.173"}
+{
+  "AP": [
+    "10"
+  ],
+  "GTS": [
+    "800"
+  ],
+  "PG": "3",
+  "LST": [],
+  "CC": [],
+  "CT": [],
+  "PRECIP": [],
+  "WS": [],
+  "WD": [],
+  "LAND_HAB": [],
+  "WATER_HAB": [],
+  "SAT_HOG": [],
+  "SAT_SUN": [],
+  "SAT_SHA": [],
+  "SWT": [],
+  "HYPRO": [],
+  "STSL": [],
+  "STSH": [],
+  "SCDT": [],
+  "CST": [],
+  "STK": [],
+  "RBN": [],
+  "SHN": [],
+  "TDS": [],
+  "TUR": [],
+  "ALB": [],
+  "DELTA": [],
+  "WCD": [],
+  "WCV": [],
+  "WIDTH": [],
+  "IMG": [
+    "1832",
+    "4200",
+    "0000",
+    "0000"
+  ],
+  "PAN_IMGS": [],
+  "JOB": [],
+  "ROCK": [
+    {
+      "SIM": "2",
+      "AVG_SIZE": "04",
+      "FW": "0",
+      "FF": "0",
+      "CVR": "0",
+      "ERSN": "2",
+      "SHP": "6",
+      "B_FIELD": "04"
+    }
+  ],
+  "TREE": [
+    {
+      "TREE_ID": "45",
+      "TREE_PCT": "8",
+      "TREE_DIA": "04",
+      "TREE_HT": "02",
+      "TREE_DEN": "01"
+    }
+  ],
+  "BIRD": [
+    {
+      "BIRD_ID": "06",
+      "BIRD_ACT": "4",
+      "BIRD_LOC": "1",
+      "BIRD_DIS": "1"
+    }
+  ],
+  "MAMMAL": [],
+  "DO": "9.03",
+  "PH": "5.36",
+  "N3": "0.143",
+  "N2": "2.667",
+  "NH": "1.085",
+  "PO": "0.115",
+  "CH": "505.0",
+  "HD": "564.1",
+  "AK": "6.173"
+}

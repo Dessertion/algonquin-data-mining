@@ -26,10 +26,13 @@ class Thing:
         counter = 0
         for key,val in self.getInfoLength().items():
             x = string[counter:counter+val]
-            if "@" not in x:
+            if "$" not in x and "@" not in x:
                 self.info[key] = string[counter:counter+val]
             else:
-                self.info[key] = ""
+                res = re.search("[0-9]+",string[counter:counter+val])
+                if res:
+                    self.info[key] = res.group(0)
+                else: self.info[key] = "N/A"
             counter+=val
 
     def __repr__(self):
@@ -208,7 +211,20 @@ class SSRF:
                     if self.order[itm] == "NEXT":
                         itm+=1
                         break
-                    if char == "@":
+                        
+                    if char == "$": #non numerical chars
+                        if type(self.mapped_info[itm]) != tuple:
+                            if self.debug:
+                                print(self.order[itm])
+                            s = self.order[itm]
+                            number = number[:len(number)-1]
+                            self.parsed_data[s].append(number)
+                            count = 0
+                            itm+=1
+                            number=""
+                            continue
+
+                    if char == "@": #null char
                         if type(self.mapped_info[itm]) == tuple:
                             if count>=self.mapped_info[itm][1]:
                                 itm+=1 
@@ -219,6 +235,7 @@ class SSRF:
                             count =0
                             number = ""
                         continue
+
                     if type(self.mapped_info[itm]) == tuple:
                         if count >= self.mapped_info[itm][1]:
                             if self.debug:
@@ -232,6 +249,8 @@ class SSRF:
                         if self.debug:
                             print(self.order[itm])
                         s = self.order[itm]
+                        if "@" in number:
+                            number = "N/A"
                         self.parsed_data[s].append(number)
                         count = 0
                         itm+=1
@@ -255,7 +274,6 @@ class SSRF:
             if type(value) == list and value:
                 if issubclass(type(value[0]),Thing):
                     ret[key] = list(x.getInfo() for x in value)
-        return json.dumps(ret)
-
-a = SSRF("./new/10-121.dat")
-print(a.toJSON())
+                elif self.INFO[key] == 1:
+                    ret[key] = value[0]
+        return json.dumps(ret,indent=2)

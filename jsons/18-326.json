@@ -1,1 +1,70 @@
-{"AP": ["00"], "GTS": ["000"], "PG": ["0"], "LST": [], "CC": [], "CT": [], "PRECIP": [], "WS": [], "WD": [], "LAND_HAB": [], "WATER_HAB": [], "SAT_HOG": [], "SAT_SUN": [], "SAT_SHA": [], "SWT": [], "HYPRO": [], "STSL": [], "STSH": [], "SCDT": [], "CST": [], "STK": [], "RBN": [], "SHN": [], "TDS": [], "TUR": [], "ALB": [], "DELTA": [], "WCD": [], "WCV": [], "WIDTH": [], "IMG": ["1832", "6200", "0000", "0000"], "PAN_IMGS": [], "JOB": [], "ROCK": [], "TREE": [], "BIRD": [{"BIRD_ID": "60", "BIRD_ACT": "0", "BIRD_LOC": "0", "BIRD_DIS": "2"}, {"BIRD_ID": "57", "BIRD_ACT": "0", "BIRD_LOC": "0", "BIRD_DIS": "2"}], "MAMMAL": [], "DO": "9.03", "PH": "196.5", "N3": "0.07", "N2": "6.01", "NH": "0.728", "PO": "2.86", "CH": "11.99", "HD": "620.0", "AK": "N/A"}
+{
+  "AP": [
+    "00"
+  ],
+  "GTS": [
+    "000"
+  ],
+  "PG": "0",
+  "LST": [],
+  "CC": [],
+  "CT": [],
+  "PRECIP": [],
+  "WS": [],
+  "WD": [],
+  "LAND_HAB": [],
+  "WATER_HAB": [],
+  "SAT_HOG": [],
+  "SAT_SUN": [],
+  "SAT_SHA": [],
+  "SWT": [],
+  "HYPRO": [],
+  "STSL": [],
+  "STSH": [],
+  "SCDT": [],
+  "CST": [],
+  "STK": [],
+  "RBN": [],
+  "SHN": [],
+  "TDS": [],
+  "TUR": [],
+  "ALB": [],
+  "DELTA": [],
+  "WCD": [],
+  "WCV": [],
+  "WIDTH": [],
+  "IMG": [
+    "1832",
+    "6200",
+    "0000",
+    "0000"
+  ],
+  "PAN_IMGS": [],
+  "JOB": [],
+  "ROCK": [],
+  "TREE": [],
+  "BIRD": [
+    {
+      "BIRD_ID": "60",
+      "BIRD_ACT": "0",
+      "BIRD_LOC": "0",
+      "BIRD_DIS": "2"
+    },
+    {
+      "BIRD_ID": "57",
+      "BIRD_ACT": "0",
+      "BIRD_LOC": "0",
+      "BIRD_DIS": "2"
+    }
+  ],
+  "MAMMAL": [],
+  "DO": "9.03",
+  "PH": "196.5",
+  "N3": "0.07",
+  "N2": "6.01",
+  "NH": "0.728",
+  "PO": "2.86",
+  "CH": "11.99",
+  "HD": "620.0",
+  "AK": "N/A"
+}
