@@ -256,12 +256,12 @@ class SSRF:
                         itm+=1
                         number=""
         ions = {}
-        linen0 = linen+1
-        while linen < len(self.data)-1:
-            linen+=1
-            #print(str(linen) + " " + self.data[linen])
-            ions[SSRF.IONS[linen-linen0]] = self.data[linen]
-        
+        for n, ion in enumerate(self.IONS):
+            if n+linen<len(self.data):
+                ions[ion] = self.data[n+linen]
+            else:
+                ions[ion] = "N/A"
+
         self.parsed_data.update(ions)
                 
     def lol(self):
