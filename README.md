@@ -6,7 +6,7 @@ These are a couple of Python scripts to aid TOPS students in mining the ~~extrem
 
 To update the available json information:
 
-1. Extract all the `.dat` files from the given AP data zip file into a folder in these scripts' directory (i.e. extracting them all into a folder called `AP20_Data` which is in the same directory as the provided 3 scripts)
+1. Extract all the `.dat` files from the given AP data zip file into a folder in these scripts' directory (e.x. extracting them all into a folder called `AP_Data` which is in the same directory as the provided 3 scripts)
     > Note: it will be far easier to extract the data if one uses a tool such as 7zip, which can extract just files using regex (regular expressions). This means that you can simply extract all the `*.dat` files from the zipped data file provided.
 
 2. Run the script `fix_format.py`, and follow the instructions
@@ -26,9 +26,9 @@ The data will all be stored in the `jsons/` folder, with names formatted like `A
         * The image order is the same as on the SSRF, top-to-bottom, left-to-right
         > Note: Unless you're doing Panoramas, this should have no real consequence, and if you are doing Panoramas/are thinking of doing Panoramas, change your mind or feel the regret.
 * Bird, Tree, Mammal, and Rock data are formatted slightly differently:
-    * There are 4 lists of objects, one for each `BIRDS`, `TREES`, `MAMMALS`, and `ROCKS`
-    * Each entry (an object) in any of the list of objects, contain the relevant data for that given object
-        * The entries in each list are in the same order as they appear in on the SSRF
+    * There are 4 arrays of objects, one for each `BIRDS`, `TREES`, `MAMMALS`, and `ROCKS`
+    * Each entry (an object) in any of the array of objects, contain the relevant data for that given object
+        * The entries in each array are in the same order as they appear in on the SSRF
         * Example: `MAMMALS[0]` may be the following object: `{
       "ID": "08",
       "ACT": "0",
@@ -46,4 +46,4 @@ The data will all be stored in the `jsons/` folder, with names formatted like `A
     * HD (Hardness, parts per thousand)
     * AK (Alkalinity, parts per thousand)
     * SP (Soil pH)
-* Entries with broken data/no data should have the value `"N/A"` (a string)
+* Entries with broken data/no data should have the value `"N/A"` (a string), or is empty (in the case of an array)
