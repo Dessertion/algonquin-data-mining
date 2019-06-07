@@ -10,13 +10,13 @@ def searchNum(string):
 def replaceNonNum(string):
     return pattern2.sub("$",string)
 
-def main(folder):
+def main(folder,foldername):
     os.makedirs(folder,mode=0o777,exist_ok=True)
 
-    for root, dirs, files in os.walk(r".\AHP_AP20\AHPDATA",topdown=False):
+    for root, dirs, files in os.walk(foldername,topdown=False):
         for name in files:
             namep = os.path.join(root,name)
-            if ".dat" in namep and "FIT" in namep:
+            if ".dat" in name and "-" in name:
                 #breakpoint()
                 f = open(namep,"r")
                 s = f.read()
@@ -68,5 +68,7 @@ def main(folder):
                 #     print(name + " " + str(counter))
 
 if __name__=="__main__":
-    main("new")
-    print("Done Fixing Data Format")
+    foldername = input("Enter name of the folder containing the .dat files: ")
+    main("new",foldername)
+    print("Done Fixing Data")
+    
