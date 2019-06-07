@@ -64,8 +64,9 @@ def main(folder):
                 
                 f.write(out)
 
-                if counter < 20: # and name.split("-")[0]=="20":
-                    print(name + " " + str(counter))
+                # if counter < 20: # and name.split("-")[0]=="20":
+                #     print(name + " " + str(counter))
 
 if __name__=="__main__":
     main("new")
+    print("Done Fixing Data Format")

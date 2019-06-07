@@ -14,7 +14,7 @@
   "LST": "1050",
   "CC": "2",
   "CT": "1",
-  "PRECIP": "0",
+  "PCP": "0",
   "WS": "1",
   "WD": "5",
   "LAND_HAB": "22",
@@ -59,7 +59,7 @@
     "99",
     "98"
   ],
-  "DELTA": [],
+  "DELTA_X": [],
   "WCD": [],
   "WCV": [],
   "WIDTH": [],
@@ -72,7 +72,7 @@
     "0209",
     "0202"
   ],
-  "PAN_IMGS": "09",
+  "NUMBER_IN_PAN": "09",
   "JOB": [
     "1",
     "8",
@@ -83,7 +83,7 @@
     "1",
     "5"
   ],
-  "ROCK": [
+  "ROCKS": [
     {
       "SIM": "0",
       "AVG_SIZE": "29",
@@ -175,55 +175,55 @@
       "B_FIELD": "00"
     }
   ],
-  "TREE": [
+  "TREES": [
     {
-      "TREE_ID": "08",
-      "TREE_PCT": "7",
-      "TREE_DIA": "10",
-      "TREE_HT": "12",
-      "TREE_DEN": "03"
+      "ID": "08",
+      "PCT": "7",
+      "DIA": "10",
+      "HT": "12",
+      "DENSITY": "03"
     },
     {
-      "TREE_ID": "48",
-      "TREE_PCT": "2",
-      "TREE_DIA": "08",
-      "TREE_HT": "09",
-      "TREE_DEN": "07"
+      "ID": "48",
+      "PCT": "2",
+      "DIA": "08",
+      "HT": "09",
+      "DENSITY": "07"
     },
     {
-      "TREE_ID": "32",
-      "TREE_PCT": "1",
-      "TREE_DIA": "25",
-      "TREE_HT": "09",
-      "TREE_DEN": "04"
+      "ID": "32",
+      "PCT": "1",
+      "DIA": "25",
+      "HT": "09",
+      "DENSITY": "04"
     }
   ],
-  "BIRD": [
+  "BIRDS": [
     {
-      "BIRD_ID": "50",
-      "BIRD_ACT": "0",
-      "BIRD_LOC": "0",
-      "BIRD_DIS": "2"
+      "ID": "50",
+      "ACT": "0",
+      "LOC": "0",
+      "DIS": "2"
     },
     {
-      "BIRD_ID": "60",
-      "BIRD_ACT": "0",
-      "BIRD_LOC": "0",
-      "BIRD_DIS": "2"
+      "ID": "60",
+      "ACT": "0",
+      "LOC": "0",
+      "DIS": "2"
     },
     {
-      "BIRD_ID": "42",
-      "BIRD_ACT": "0",
-      "BIRD_LOC": "0",
-      "BIRD_DIS": "2"
+      "ID": "42",
+      "ACT": "0",
+      "LOC": "0",
+      "DIS": "2"
     }
   ],
-  "MAMMAL": [
+  "MAMMALS": [
     {
-      "MML_ID": "09",
-      "MML_ACT": "0",
-      "MML_LOC": "0",
-      "MML_EVD": "1"
+      "ID": "09",
+      "ACT": "0",
+      "LOC": "0",
+      "EVD": "1"
     }
   ],
   "DO": "N/A",

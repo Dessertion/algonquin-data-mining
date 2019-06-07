@@ -44,10 +44,10 @@ class Thing:
 
 class Mammal(Thing):
     def getInfoLength(self):
-        return {"MML_ID":2,
-        "MML_ACT":1,
-        "MML_LOC":1,
-        "MML_EVD":1}
+        return {"ID":2,
+        "ACT":1,
+        "LOC":1,
+        "EVD":1}
     
     @staticmethod
     def getMeta():
@@ -60,10 +60,10 @@ class Bird(Thing):
 
     def getInfoLength(self):
         return {
-        "BIRD_ID":2,
-        "BIRD_ACT":1,
-        "BIRD_LOC":1,
-        "BIRD_DIS":1}
+        "ID":2,
+        "ACT":1,
+        "LOC":1,
+        "DIS":1}
 
     @staticmethod
     def getMeta():
@@ -75,11 +75,11 @@ class Bird(Thing):
 class Tree(Thing):
     def getInfoLength(self):
         return {
-        "TREE_ID":2,
-        "TREE_PCT":1,
-        "TREE_DIA":2,
-        "TREE_HT":2,
-        "TREE_DEN":2
+        "ID":2,
+        "PCT":1,
+        "DIA":2,
+        "HT":2,
+        "DENSITY":2
     }
 
     @staticmethod
@@ -116,7 +116,7 @@ class SSRF:
         "LST":4,
         "CC":1,
         "CT":1,
-        "PRECIP":1,
+        "PCP":1,
         "WS":1,
         "WD":1,
         "LAND_HAB":2,
@@ -136,26 +136,26 @@ class SSRF:
         "TDS":3,
         "TUR":3,
         "ALB":2,
-        "DELTA":2,
+        "DELTA_X":2,
         "WCD":2,
         "WCV":2,
         "WIDTH":3,
         "IMG":4,
-        "PAN_IMGS":2,
+        "NUMBER_IN_PAN":2,
         "JOB":1,
         #now for page 2
-        "ROCK":(3,10),
-        "TREE":(2,9),
-        "BIRD":(1,5),
-        "MAMMAL":(0,5),
+        "ROCKS":(3,10),
+        "TREES":(2,9),
+        "BIRDS":(1,5),
+        "MAMMALS":(0,5),
         "NULL":1,
         "NEXT":1
     }
 
     #super disgusting but idgaf
-    ORDER = list(chain(["AP","GTS","PG","LST","CC","CT","PRECIP","WS","WD","NEXT","LAND_HAB","SAT_HOG","SAT_SUN","SAT_SHA"],
+    ORDER = list(chain(["AP","GTS","PG","LST","CC","CT","PCP","WS","WD","NEXT","LAND_HAB","SAT_HOG","SAT_SUN","SAT_SHA"],
     ["SWT"]*2,["HYPRO"]*3,["SCDT"],["HYPRO"]*2,["STSL"]*6,["CST","STK"],["STSH"]*6,["NULL"]*6,["RBN","SHN"],["NULL"]*4,["WATER_HAB"],
-    ["TDS"]*2,["TUR"]*2,["IMG"]*2,["ALB"]*10,["PAN_IMGS","IMG","DELTA"],["WCD"]*10,["WCV"]*10,["WIDTH"]*2,["IMG"]*5,["JOB"]*10,["IMG"]*6,["NEXT"]))
+    ["TDS"]*2,["TUR"]*2,["IMG"]*2,["ALB"]*10,["NUMBER_IN_PAN","IMG","DELTA_X"],["WCD"]*10,["WCV"]*10,["WIDTH"]*2,["IMG"]*5,["JOB"]*10,["IMG"]*6,["NEXT"]))
 
     IONS = ["DO","PH","N3","N2","NH","PO","CH","HD","AK","SP"]
 
@@ -170,11 +170,11 @@ class SSRF:
             print(filepath)
         else: ap = ap.group()
         if int(ap) <= 12:
-            x = list(chain(["NULL"]*10,["TREE","BIRD","MAMMAL"]))*8
-            self.order = self.ORDER+  ["ROCK","NEXT"] + x
+            x = list(chain(["NULL"]*10,["TREES","BIRDS","MAMMALS"]))*8
+            self.order = self.ORDER+  ["ROCKS","NEXT"] + x
         else:
-            self.order = self.ORDER+ ["AP","GTS","PG","NEXT"] + list(chain(["ROCK","TREE",
-    "BIRD","MAMMAL"]*9))  
+            self.order = self.ORDER+ ["AP","GTS","PG","NEXT"] + list(chain(["ROCKS","TREES",
+    "BIRDS","MAMMALS"]*9))  
 
         self.mapped_info = list(map(lambda x : self.INFO[x], self.order))
         #print(self.order)

@@ -5,7 +5,7 @@
   "LST": "1145",
   "CC": "4",
   "CT": "2",
-  "PRECIP": "0",
+  "PCP": "0",
   "WS": "3",
   "WD": "2",
   "LAND_HAB": "41",
@@ -65,7 +65,7 @@
     "99",
     "62"
   ],
-  "DELTA": "00",
+  "DELTA_X": "00",
   "WCD": [
     "00",
     "00",
@@ -110,7 +110,7 @@
     "0288",
     "0286"
   ],
-  "PAN_IMGS": "10",
+  "NUMBER_IN_PAN": "10",
   "JOB": [
     "7",
     "6",
@@ -123,7 +123,7 @@
     "1",
     "1"
   ],
-  "ROCK": {
+  "ROCKS": {
     "SIM": "3",
     "AVG_SIZE": "99",
     "FW": "0",
@@ -133,51 +133,51 @@
     "SHP": "6",
     "B_FIELD": "53"
   },
-  "TREE": [
+  "TREES": [
     {
-      "TREE_ID": "48",
-      "TREE_PCT": "2",
-      "TREE_DIA": "02",
-      "TREE_HT": "02",
-      "TREE_DEN": "05"
+      "ID": "48",
+      "PCT": "2",
+      "DIA": "02",
+      "HT": "02",
+      "DENSITY": "05"
     },
     {
-      "TREE_ID": "40",
-      "TREE_PCT": "1",
-      "TREE_DIA": "25",
-      "TREE_HT": "09",
-      "TREE_DEN": "99"
+      "ID": "40",
+      "PCT": "1",
+      "DIA": "25",
+      "HT": "09",
+      "DENSITY": "99"
     },
     {
-      "TREE_ID": "49",
-      "TREE_PCT": "2",
-      "TREE_DIA": "33",
-      "TREE_HT": "10",
-      "TREE_DEN": "02"
+      "ID": "49",
+      "PCT": "2",
+      "DIA": "33",
+      "HT": "10",
+      "DENSITY": "02"
     },
     {
-      "TREE_ID": "50",
-      "TREE_PCT": "1",
-      "TREE_DIA": "14",
-      "TREE_HT": "07",
-      "TREE_DEN": "99"
+      "ID": "50",
+      "PCT": "1",
+      "DIA": "14",
+      "HT": "07",
+      "DENSITY": "99"
     }
   ],
-  "BIRD": [
+  "BIRDS": [
     {
-      "BIRD_ID": "39",
-      "BIRD_ACT": "0",
-      "BIRD_LOC": "0",
-      "BIRD_DIS": "2"
+      "ID": "39",
+      "ACT": "0",
+      "LOC": "0",
+      "DIS": "2"
     },
     {
-      "BIRD_ID": "81",
-      "BIRD_ACT": "0",
-      "BIRD_LOC": "0",
-      "BIRD_DIS": "2"
+      "ID": "81",
+      "ACT": "0",
+      "LOC": "0",
+      "DIS": "2"
     }
   ],
-  "MAMMAL": [],
+  "MAMMALS": [],
   "DO": "6.500",
   "PH": "5.66",
   "N3": "2.89",

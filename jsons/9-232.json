@@ -5,7 +5,7 @@
   "LST": "0202",
   "CC": "7",
   "CT": "0",
-  "PRECIP": "3",
+  "PCP": "3",
   "WS": "7",
   "WD": "2",
   "LAND_HAB": "41",
@@ -65,7 +65,7 @@
     "99",
     "99"
   ],
-  "DELTA": "03",
+  "DELTA_X": "03",
   "WCD": [
     "01",
     "01",
@@ -110,7 +110,7 @@
     "0048",
     "0049"
   ],
-  "PAN_IMGS": "10",
+  "NUMBER_IN_PAN": "10",
   "JOB": [
     "1",
     "6",
@@ -123,7 +123,7 @@
     "1",
     "4"
   ],
-  "ROCK": {
+  "ROCKS": {
     "SIM": "1",
     "AVG_SIZE": "30",
     "FW": "0",
@@ -133,55 +133,55 @@
     "SHP": "3",
     "B_FIELD": "04"
   },
-  "TREE": [
+  "TREES": [
     {
-      "TREE_ID": "48",
-      "TREE_PCT": "2",
-      "TREE_DIA": "17",
-      "TREE_HT": "15",
-      "TREE_DEN": "05"
+      "ID": "48",
+      "PCT": "2",
+      "DIA": "17",
+      "HT": "15",
+      "DENSITY": "05"
     },
     {
-      "TREE_ID": "32",
-      "TREE_PCT": "3",
-      "TREE_DIA": "18",
-      "TREE_HT": "18",
-      "TREE_DEN": "17"
+      "ID": "32",
+      "PCT": "3",
+      "DIA": "18",
+      "HT": "18",
+      "DENSITY": "17"
     },
     {
-      "TREE_ID": "31",
-      "TREE_PCT": "2",
-      "TREE_DIA": "40",
-      "TREE_HT": "24",
-      "TREE_DEN": "07"
+      "ID": "31",
+      "PCT": "2",
+      "DIA": "40",
+      "HT": "24",
+      "DENSITY": "07"
     }
   ],
-  "BIRD": [
+  "BIRDS": [
     {
-      "BIRD_ID": "19",
-      "BIRD_ACT": "5",
-      "BIRD_LOC": "5",
-      "BIRD_DIS": "2"
+      "ID": "19",
+      "ACT": "5",
+      "LOC": "5",
+      "DIS": "2"
     },
     {
-      "BIRD_ID": "81",
-      "BIRD_ACT": "1",
-      "BIRD_LOC": "3",
-      "BIRD_DIS": "2"
+      "ID": "81",
+      "ACT": "1",
+      "LOC": "3",
+      "DIS": "2"
     },
     {
-      "BIRD_ID": "47",
-      "BIRD_ACT": "1",
-      "BIRD_LOC": "3",
-      "BIRD_DIS": "2"
+      "ID": "47",
+      "ACT": "1",
+      "LOC": "3",
+      "DIS": "2"
     }
   ],
-  "MAMMAL": [
+  "MAMMALS": [
     {
-      "MML_ID": "08",
-      "MML_ACT": "0",
-      "MML_LOC": "0",
-      "MML_EVD": "0"
+      "ID": "08",
+      "ACT": "0",
+      "LOC": "0",
+      "EVD": "0"
     }
   ],
   "DO": "11.74",

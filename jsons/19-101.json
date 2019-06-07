@@ -14,7 +14,7 @@
   "LST": "1444",
   "CC": "6",
   "CT": "1",
-  "PRECIP": "0",
+  "PCP": "0",
   "WS": "3",
   "WD": "5",
   "LAND_HAB": "30",
@@ -74,7 +74,7 @@
     "26",
     "29"
   ],
-  "DELTA": "00",
+  "DELTA_X": "00",
   "WCD": [
     "00",
     "00",
@@ -119,7 +119,7 @@
     "0052",
     "0053"
   ],
-  "PAN_IMGS": "10",
+  "NUMBER_IN_PAN": "10",
   "JOB": [
     "2",
     "1",
@@ -132,7 +132,7 @@
     "7",
     "8"
   ],
-  "ROCK": [
+  "ROCKS": [
     {
       "SIM": "2",
       "AVG_SIZE": "80",
@@ -224,130 +224,130 @@
       "B_FIELD": "02"
     }
   ],
-  "TREE": [
+  "TREES": [
     {
-      "TREE_ID": "09",
-      "TREE_PCT": "3",
-      "TREE_DIA": "64",
-      "TREE_HT": "19",
-      "TREE_DEN": "00"
+      "ID": "09",
+      "PCT": "3",
+      "DIA": "64",
+      "HT": "19",
+      "DENSITY": "00"
     },
     {
-      "TREE_ID": "02",
-      "TREE_PCT": "1",
-      "TREE_DIA": "49",
-      "TREE_HT": "18",
-      "TREE_DEN": "00"
+      "ID": "02",
+      "PCT": "1",
+      "DIA": "49",
+      "HT": "18",
+      "DENSITY": "00"
     },
     {
-      "TREE_ID": "43",
-      "TREE_PCT": "2",
-      "TREE_DIA": "17",
-      "TREE_HT": "08",
-      "TREE_DEN": "00"
+      "ID": "43",
+      "PCT": "2",
+      "DIA": "17",
+      "HT": "08",
+      "DENSITY": "00"
     },
     {
-      "TREE_ID": "13",
-      "TREE_PCT": "1",
-      "TREE_DIA": "29",
-      "TREE_HT": "17",
-      "TREE_DEN": "00"
+      "ID": "13",
+      "PCT": "1",
+      "DIA": "29",
+      "HT": "17",
+      "DENSITY": "00"
     },
     {
-      "TREE_ID": "28",
-      "TREE_PCT": "1",
-      "TREE_DIA": "27",
-      "TREE_HT": "17",
-      "TREE_DEN": "00"
+      "ID": "28",
+      "PCT": "1",
+      "DIA": "27",
+      "HT": "17",
+      "DENSITY": "00"
     },
     {
-      "TREE_ID": "26",
-      "TREE_PCT": "2",
-      "TREE_DIA": "33",
-      "TREE_HT": "15",
-      "TREE_DEN": "10"
+      "ID": "26",
+      "PCT": "2",
+      "DIA": "33",
+      "HT": "15",
+      "DENSITY": "10"
     }
   ],
-  "BIRD": [
+  "BIRDS": [
     {
-      "BIRD_ID": "69",
-      "BIRD_ACT": "1",
-      "BIRD_LOC": "3",
-      "BIRD_DIS": "2"
+      "ID": "69",
+      "ACT": "1",
+      "LOC": "3",
+      "DIS": "2"
     },
     {
-      "BIRD_ID": "05",
-      "BIRD_ACT": "5",
-      "BIRD_LOC": "5",
-      "BIRD_DIS": "1"
+      "ID": "05",
+      "ACT": "5",
+      "LOC": "5",
+      "DIS": "1"
     },
     {
-      "BIRD_ID": "47",
-      "BIRD_ACT": "2",
-      "BIRD_LOC": "4",
-      "BIRD_DIS": "1"
+      "ID": "47",
+      "ACT": "2",
+      "LOC": "4",
+      "DIS": "1"
     },
     {
-      "BIRD_ID": "57",
-      "BIRD_ACT": "5",
-      "BIRD_LOC": "5",
-      "BIRD_DIS": "1"
+      "ID": "57",
+      "ACT": "5",
+      "LOC": "5",
+      "DIS": "1"
     },
     {
-      "BIRD_ID": "65",
-      "BIRD_ACT": "0",
-      "BIRD_LOC": "0",
-      "BIRD_DIS": "2"
+      "ID": "65",
+      "ACT": "0",
+      "LOC": "0",
+      "DIS": "2"
     },
     {
-      "BIRD_ID": "50",
-      "BIRD_ACT": "0",
-      "BIRD_LOC": "0",
-      "BIRD_DIS": "2"
+      "ID": "50",
+      "ACT": "0",
+      "LOC": "0",
+      "DIS": "2"
     },
     {
-      "BIRD_ID": "12",
-      "BIRD_ACT": "2",
-      "BIRD_LOC": "4",
-      "BIRD_DIS": "1"
+      "ID": "12",
+      "ACT": "2",
+      "LOC": "4",
+      "DIS": "1"
     },
     {
-      "BIRD_ID": "76",
-      "BIRD_ACT": "1",
-      "BIRD_LOC": "3",
-      "BIRD_DIS": "1"
+      "ID": "76",
+      "ACT": "1",
+      "LOC": "3",
+      "DIS": "1"
     },
     {
-      "BIRD_ID": "10",
-      "BIRD_ACT": "0",
-      "BIRD_LOC": "0",
-      "BIRD_DIS": "2"
+      "ID": "10",
+      "ACT": "0",
+      "LOC": "0",
+      "DIS": "2"
     }
   ],
-  "MAMMAL": [
+  "MAMMALS": [
     {
-      "MML_ID": "01",
-      "MML_ACT": "0",
-      "MML_LOC": "0",
-      "MML_EVD": "5"
+      "ID": "01",
+      "ACT": "0",
+      "LOC": "0",
+      "EVD": "5"
     },
     {
-      "MML_ID": "04",
-      "MML_ACT": "6",
-      "MML_LOC": "5",
-      "MML_EVD": "4"
+      "ID": "04",
+      "ACT": "6",
+      "LOC": "5",
+      "EVD": "4"
     },
     {
-      "MML_ID": "18",
-      "MML_ACT": "0",
-      "MML_LOC": "3",
-      "MML_EVD": "4"
+      "ID": "18",
+      "ACT": "0",
+      "LOC": "3",
+      "EVD": "4"
     },
     {
-      "MML_ID": "02",
-      "MML_ACT": "0",
-      "MML_LOC": "4",
-      "MML_EVD": "5"
+      "ID": "02",
+      "ACT": "0",
+      "LOC": "4",
+      "EVD": "5"
     }
   ],
   "DO": "N/A",

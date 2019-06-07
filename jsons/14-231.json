@@ -14,7 +14,7 @@
   "LST": "0845",
   "CC": "3",
   "CT": "9",
-  "PRECIP": "0",
+  "PCP": "0",
   "WS": "0",
   "WD": "0",
   "LAND_HAB": "41",
@@ -74,7 +74,7 @@
     "00",
     "00"
   ],
-  "DELTA": "05",
+  "DELTA_X": "05",
   "WCD": [
     "01",
     "01",
@@ -119,7 +119,7 @@
     "0025",
     "0000"
   ],
-  "PAN_IMGS": "11",
+  "NUMBER_IN_PAN": "11",
   "JOB": [
     "1",
     "1",
@@ -132,58 +132,58 @@
     "1",
     "7"
   ],
-  "ROCK": [],
-  "TREE": [
+  "ROCKS": [],
+  "TREES": [
     {
-      "TREE_ID": "39",
-      "TREE_PCT": "3",
-      "TREE_DIA": "25",
-      "TREE_HT": "09",
-      "TREE_DEN": "01"
+      "ID": "39",
+      "PCT": "3",
+      "DIA": "25",
+      "HT": "09",
+      "DENSITY": "01"
     },
     {
-      "TREE_ID": "47",
-      "TREE_PCT": "3",
-      "TREE_DIA": "10",
-      "TREE_HT": "10",
-      "TREE_DEN": "03"
+      "ID": "47",
+      "PCT": "3",
+      "DIA": "10",
+      "HT": "10",
+      "DENSITY": "03"
     },
     {
-      "TREE_ID": "48",
-      "TREE_PCT": "3",
-      "TREE_DIA": "05",
-      "TREE_HT": "03",
-      "TREE_DEN": "02"
+      "ID": "48",
+      "PCT": "3",
+      "DIA": "05",
+      "HT": "03",
+      "DENSITY": "02"
     },
     {
-      "TREE_ID": "40",
-      "TREE_PCT": "1",
-      "TREE_DIA": "18",
-      "TREE_HT": "10",
-      "TREE_DEN": "02"
+      "ID": "40",
+      "PCT": "1",
+      "DIA": "18",
+      "HT": "10",
+      "DENSITY": "02"
     }
   ],
-  "BIRD": [
+  "BIRDS": [
     {
-      "BIRD_ID": "57",
-      "BIRD_ACT": "0",
-      "BIRD_LOC": "0",
-      "BIRD_DIS": "2"
+      "ID": "57",
+      "ACT": "0",
+      "LOC": "0",
+      "DIS": "2"
     },
     {
-      "BIRD_ID": "69",
-      "BIRD_ACT": "0",
-      "BIRD_LOC": "0",
-      "BIRD_DIS": "2"
+      "ID": "69",
+      "ACT": "0",
+      "LOC": "0",
+      "DIS": "2"
     },
     {
-      "BIRD_ID": "50",
-      "BIRD_ACT": "0",
-      "BIRD_LOC": "0",
-      "BIRD_DIS": "2"
+      "ID": "50",
+      "ACT": "0",
+      "LOC": "0",
+      "DIS": "2"
     }
   ],
-  "MAMMAL": [],
+  "MAMMALS": [],
   "DO": "2.236",
   "PH": "7.250",
   "N3": "22.96",

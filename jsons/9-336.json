@@ -5,7 +5,7 @@
   "LST": "4354",
   "CC": "4",
   "CT": "0",
-  "PRECIP": "0",
+  "PCP": "0",
   "WS": "0",
   "WD": "1",
   "LAND_HAB": "41",
@@ -65,7 +65,7 @@
     "99",
     "99"
   ],
-  "DELTA": "00",
+  "DELTA_X": "00",
   "WCD": [
     "00",
     "00",
@@ -110,7 +110,7 @@
     "3687",
     "3688"
   ],
-  "PAN_IMGS": "08",
+  "NUMBER_IN_PAN": "08",
   "JOB": [
     "4",
     "2",
@@ -123,7 +123,7 @@
     "7",
     "0"
   ],
-  "ROCK": {
+  "ROCKS": {
     "SIM": "2",
     "AVG_SIZE": "80",
     "FW": "3",
@@ -133,61 +133,61 @@
     "SHP": "5",
     "B_FIELD": "03"
   },
-  "TREE": [
+  "TREES": [
     {
-      "TREE_ID": "48",
-      "TREE_PCT": "4",
-      "TREE_DIA": "22",
-      "TREE_HT": "13",
-      "TREE_DEN": "01"
+      "ID": "48",
+      "PCT": "4",
+      "DIA": "22",
+      "HT": "13",
+      "DENSITY": "01"
     },
     {
-      "TREE_ID": "43",
-      "TREE_PCT": "2",
-      "TREE_DIA": "20",
-      "TREE_HT": "14",
-      "TREE_DEN": "04"
+      "ID": "43",
+      "PCT": "2",
+      "DIA": "20",
+      "HT": "14",
+      "DENSITY": "04"
     },
     {
-      "TREE_ID": "25",
-      "TREE_PCT": "3",
-      "TREE_DIA": "14",
-      "TREE_HT": "10",
-      "TREE_DEN": "04"
+      "ID": "25",
+      "PCT": "3",
+      "DIA": "14",
+      "HT": "10",
+      "DENSITY": "04"
     }
   ],
-  "BIRD": [
+  "BIRDS": [
     {
-      "BIRD_ID": "19",
-      "BIRD_ACT": "1",
-      "BIRD_LOC": "3",
-      "BIRD_DIS": "2"
+      "ID": "19",
+      "ACT": "1",
+      "LOC": "3",
+      "DIS": "2"
     },
     {
-      "BIRD_ID": "74",
-      "BIRD_ACT": "2",
-      "BIRD_LOC": "4",
-      "BIRD_DIS": "2"
+      "ID": "74",
+      "ACT": "2",
+      "LOC": "4",
+      "DIS": "2"
     },
     {
-      "BIRD_ID": "46",
-      "BIRD_ACT": "1",
-      "BIRD_LOC": "3",
-      "BIRD_DIS": "2"
+      "ID": "46",
+      "ACT": "1",
+      "LOC": "3",
+      "DIS": "2"
     },
     {
-      "BIRD_ID": "01",
-      "BIRD_ACT": "4",
-      "BIRD_LOC": "1",
-      "BIRD_DIS": "1"
+      "ID": "01",
+      "ACT": "4",
+      "LOC": "1",
+      "DIS": "1"
     }
   ],
-  "MAMMAL": [
+  "MAMMALS": [
     {
-      "MML_ID": "01",
-      "MML_ACT": "2",
-      "MML_LOC": "5",
-      "MML_EVD": "0"
+      "ID": "01",
+      "ACT": "2",
+      "LOC": "5",
+      "EVD": "0"
     }
   ],
   "DO": "1.50",

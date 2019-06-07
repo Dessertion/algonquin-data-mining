@@ -14,7 +14,7 @@
   "LST": "1627",
   "CC": "0",
   "CT": "1",
-  "PRECIP": "0",
+  "PCP": "0",
   "WS": "1",
   "WD": "1",
   "LAND_HAB": "00",
@@ -74,7 +74,7 @@
     "05",
     "03"
   ],
-  "DELTA": "00",
+  "DELTA_X": "00",
   "WCD": [
     "03",
     "02",
@@ -119,7 +119,7 @@
     "0000",
     "0000"
   ],
-  "PAN_IMGS": "12",
+  "NUMBER_IN_PAN": "12",
   "JOB": [
     "0",
     "0",
@@ -132,7 +132,7 @@
     "0",
     "0"
   ],
-  "ROCK": [
+  "ROCKS": [
     {
       "SIM": "0",
       "AVG_SIZE": "99",
@@ -144,49 +144,49 @@
       "B_FIELD": "02"
     }
   ],
-  "TREE": [
+  "TREES": [
     {
-      "TREE_ID": "39",
-      "TREE_PCT": "1",
-      "TREE_DIA": "07",
-      "TREE_HT": "04",
-      "TREE_DEN": "99"
+      "ID": "39",
+      "PCT": "1",
+      "DIA": "07",
+      "HT": "04",
+      "DENSITY": "99"
     },
     {
-      "TREE_ID": "43",
-      "TREE_PCT": "7",
-      "TREE_DIA": "11",
-      "TREE_HT": "23",
-      "TREE_DEN": "03"
+      "ID": "43",
+      "PCT": "7",
+      "DIA": "11",
+      "HT": "23",
+      "DENSITY": "03"
     },
     {
-      "TREE_ID": "25",
-      "TREE_PCT": "2",
-      "TREE_DIA": "06",
-      "TREE_HT": "19",
-      "TREE_DEN": "06"
+      "ID": "25",
+      "PCT": "2",
+      "DIA": "06",
+      "HT": "19",
+      "DENSITY": "06"
     }
   ],
-  "BIRD": [
+  "BIRDS": [
     {
-      "BIRD_ID": "65",
-      "BIRD_ACT": "2",
-      "BIRD_LOC": "4",
-      "BIRD_DIS": "2"
+      "ID": "65",
+      "ACT": "2",
+      "LOC": "4",
+      "DIS": "2"
     },
     {
-      "BIRD_ID": "76",
-      "BIRD_ACT": "1",
-      "BIRD_LOC": "3",
-      "BIRD_DIS": "2"
+      "ID": "76",
+      "ACT": "1",
+      "LOC": "3",
+      "DIS": "2"
     }
   ],
-  "MAMMAL": [
+  "MAMMALS": [
     {
-      "MML_ID": "04",
-      "MML_ACT": "4",
-      "MML_LOC": "3",
-      "MML_EVD": "4"
+      "ID": "04",
+      "ACT": "4",
+      "LOC": "3",
+      "EVD": "4"
     }
   ],
   "DO": "N/A",

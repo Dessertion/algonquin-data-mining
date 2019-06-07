@@ -14,7 +14,7 @@
   "LST": "1038",
   "CC": "8",
   "CT": "2",
-  "PRECIP": "0",
+  "PCP": "0",
   "WS": "8",
   "WD": "2",
   "LAND_HAB": "42",
@@ -74,7 +74,7 @@
     "68",
     "97"
   ],
-  "DELTA": "00",
+  "DELTA_X": "00",
   "WCD": [
     "00",
     "00",
@@ -119,7 +119,7 @@
     "6841",
     "6840"
   ],
-  "PAN_IMGS": "10",
+  "NUMBER_IN_PAN": "10",
   "JOB": [
     "1",
     "2",
@@ -132,7 +132,7 @@
     "7",
     "9"
   ],
-  "ROCK": [
+  "ROCKS": [
     {
       "SIM": "2",
       "AVG_SIZE": "01",
@@ -154,54 +154,54 @@
       "B_FIELD": "05"
     }
   ],
-  "TREE": [
+  "TREES": [
     {
-      "TREE_ID": "45",
-      "TREE_PCT": "5",
-      "TREE_DIA": "32",
-      "TREE_HT": "12",
-      "TREE_DEN": "23"
+      "ID": "45",
+      "PCT": "5",
+      "DIA": "32",
+      "HT": "12",
+      "DENSITY": "23"
     },
     {
-      "TREE_ID": "01",
-      "TREE_PCT": "5",
-      "TREE_DIA": "10",
-      "TREE_HT": "05",
-      "TREE_DEN": "12"
+      "ID": "01",
+      "PCT": "5",
+      "DIA": "10",
+      "HT": "05",
+      "DENSITY": "12"
     }
   ],
-  "BIRD": [
+  "BIRDS": [
     {
-      "BIRD_ID": "06",
-      "BIRD_ACT": "4",
-      "BIRD_LOC": "1",
-      "BIRD_DIS": "2"
+      "ID": "06",
+      "ACT": "4",
+      "LOC": "1",
+      "DIS": "2"
     },
     {
-      "BIRD_ID": "69",
-      "BIRD_ACT": "2",
-      "BIRD_LOC": "4",
-      "BIRD_DIS": "1"
+      "ID": "69",
+      "ACT": "2",
+      "LOC": "4",
+      "DIS": "1"
     },
     {
-      "BIRD_ID": "44",
-      "BIRD_ACT": "2",
-      "BIRD_LOC": "4",
-      "BIRD_DIS": "1"
+      "ID": "44",
+      "ACT": "2",
+      "LOC": "4",
+      "DIS": "1"
     }
   ],
-  "MAMMAL": [
+  "MAMMALS": [
     {
-      "MML_ID": "08",
-      "MML_ACT": "3",
-      "MML_LOC": "3",
-      "MML_EVD": "3"
+      "ID": "08",
+      "ACT": "3",
+      "LOC": "3",
+      "EVD": "3"
     },
     {
-      "MML_ID": "14",
-      "MML_ACT": "5",
-      "MML_LOC": "1",
-      "MML_EVD": "7"
+      "ID": "14",
+      "ACT": "5",
+      "LOC": "1",
+      "EVD": "7"
     }
   ],
   "DO": "8.250",

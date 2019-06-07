@@ -5,7 +5,7 @@
   "LST": "1310",
   "CC": "1",
   "CT": "3",
-  "PRECIP": "0",
+  "PCP": "0",
   "WS": "0",
   "WD": "0",
   "LAND_HAB": "41",
@@ -65,7 +65,7 @@
     "63",
     "24"
   ],
-  "DELTA": "00",
+  "DELTA_X": "00",
   "WCD": [
     "00",
     "00",
@@ -110,7 +110,7 @@
     "8582",
     "8584"
   ],
-  "PAN_IMGS": "16",
+  "NUMBER_IN_PAN": "16",
   "JOB": [
     "2",
     "7",
@@ -123,7 +123,7 @@
     "4",
     "1"
   ],
-  "ROCK": {
+  "ROCKS": {
     "SIM": "1",
     "AVG_SIZE": "01",
     "FW": "0",
@@ -133,54 +133,54 @@
     "SHP": "6",
     "B_FIELD": "30"
   },
-  "TREE": [
+  "TREES": [
     {
-      "TREE_ID": "43",
-      "TREE_PCT": "4",
-      "TREE_DIA": "09",
-      "TREE_HT": "07",
-      "TREE_DEN": "03"
+      "ID": "43",
+      "PCT": "4",
+      "DIA": "09",
+      "HT": "07",
+      "DENSITY": "03"
     },
     {
-      "TREE_ID": "31",
-      "TREE_PCT": "1",
-      "TREE_DIA": "24",
-      "TREE_HT": "18",
-      "TREE_DEN": "03"
+      "ID": "31",
+      "PCT": "1",
+      "DIA": "24",
+      "HT": "18",
+      "DENSITY": "03"
     }
   ],
-  "BIRD": [
+  "BIRDS": [
     {
-      "BIRD_ID": "81",
-      "BIRD_ACT": "0",
-      "BIRD_LOC": "0",
-      "BIRD_DIS": "2"
+      "ID": "81",
+      "ACT": "0",
+      "LOC": "0",
+      "DIS": "2"
     },
     {
-      "BIRD_ID": "50",
-      "BIRD_ACT": "0",
-      "BIRD_LOC": "0",
-      "BIRD_DIS": "2"
+      "ID": "50",
+      "ACT": "0",
+      "LOC": "0",
+      "DIS": "2"
     },
     {
-      "BIRD_ID": "66",
-      "BIRD_ACT": "0",
-      "BIRD_LOC": "0",
-      "BIRD_DIS": "2"
+      "ID": "66",
+      "ACT": "0",
+      "LOC": "0",
+      "DIS": "2"
     }
   ],
-  "MAMMAL": [
+  "MAMMALS": [
     {
-      "MML_ID": "11",
-      "MML_ACT": "0",
-      "MML_LOC": "3",
-      "MML_EVD": "1"
+      "ID": "11",
+      "ACT": "0",
+      "LOC": "3",
+      "EVD": "1"
     },
     {
-      "MML_ID": "22",
-      "MML_ACT": "0",
-      "MML_LOC": "3",
-      "MML_EVD": "1"
+      "ID": "22",
+      "ACT": "0",
+      "LOC": "3",
+      "EVD": "1"
     }
   ],
   "DO": "3.333",

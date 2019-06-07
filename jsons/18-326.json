@@ -11,7 +11,7 @@
   "LST": [],
   "CC": [],
   "CT": [],
-  "PRECIP": [],
+  "PCP": [],
   "WS": [],
   "WD": [],
   "LAND_HAB": [],
@@ -31,7 +31,7 @@
   "TDS": [],
   "TUR": [],
   "ALB": [],
-  "DELTA": [],
+  "DELTA_X": [],
   "WCD": [],
   "WCV": [],
   "WIDTH": [],
@@ -41,25 +41,25 @@
     "0000",
     "0000"
   ],
-  "PAN_IMGS": [],
+  "NUMBER_IN_PAN": [],
   "JOB": [],
-  "ROCK": [],
-  "TREE": [],
-  "BIRD": [
+  "ROCKS": [],
+  "TREES": [],
+  "BIRDS": [
     {
-      "BIRD_ID": "60",
-      "BIRD_ACT": "0",
-      "BIRD_LOC": "0",
-      "BIRD_DIS": "2"
+      "ID": "60",
+      "ACT": "0",
+      "LOC": "0",
+      "DIS": "2"
     },
     {
-      "BIRD_ID": "57",
-      "BIRD_ACT": "0",
-      "BIRD_LOC": "0",
-      "BIRD_DIS": "2"
+      "ID": "57",
+      "ACT": "0",
+      "LOC": "0",
+      "DIS": "2"
     }
   ],
-  "MAMMAL": [],
+  "MAMMALS": [],
   "DO": "4.019",
   "PH": "9.03",
   "N3": "196.5",

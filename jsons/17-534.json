@@ -14,7 +14,7 @@
   "LST": "1225",
   "CC": "5",
   "CT": "5",
-  "PRECIP": "0",
+  "PCP": "0",
   "WS": "2",
   "WD": "3",
   "LAND_HAB": "11",
@@ -74,7 +74,7 @@
     "99",
     "99"
   ],
-  "DELTA": "03",
+  "DELTA_X": "03",
   "WCD": [
     "01",
     "02",
@@ -119,7 +119,7 @@
     "4372",
     "0000"
   ],
-  "PAN_IMGS": "09",
+  "NUMBER_IN_PAN": "09",
   "JOB": [
     "2",
     "5",
@@ -132,7 +132,7 @@
     "9",
     "1"
   ],
-  "ROCK": [
+  "ROCKS": [
     {
       "SIM": "2",
       "AVG_SIZE": "53",
@@ -214,57 +214,57 @@
       "B_FIELD": "02"
     }
   ],
-  "TREE": [
+  "TREES": [
     {
-      "TREE_ID": "47",
-      "TREE_PCT": "3",
-      "TREE_DIA": "15",
-      "TREE_HT": "18",
-      "TREE_DEN": "02"
+      "ID": "47",
+      "PCT": "3",
+      "DIA": "15",
+      "HT": "18",
+      "DENSITY": "02"
     },
     {
-      "TREE_ID": "32",
-      "TREE_PCT": "2",
-      "TREE_DIA": "38",
-      "TREE_HT": "25",
-      "TREE_DEN": "27"
+      "ID": "32",
+      "PCT": "2",
+      "DIA": "38",
+      "HT": "25",
+      "DENSITY": "27"
     },
     {
-      "TREE_ID": "49",
-      "TREE_PCT": "2",
-      "TREE_DIA": "24",
-      "TREE_HT": "20",
-      "TREE_DEN": "12"
+      "ID": "49",
+      "PCT": "2",
+      "DIA": "24",
+      "HT": "20",
+      "DENSITY": "12"
     },
     {
-      "TREE_ID": "48",
-      "TREE_PCT": "3",
-      "TREE_DIA": "18",
-      "TREE_HT": "16",
-      "TREE_DEN": "10"
+      "ID": "48",
+      "PCT": "3",
+      "DIA": "18",
+      "HT": "16",
+      "DENSITY": "10"
     }
   ],
-  "BIRD": [
+  "BIRDS": [
     {
-      "BIRD_ID": "59",
-      "BIRD_ACT": "0",
-      "BIRD_LOC": "0",
-      "BIRD_DIS": "2"
+      "ID": "59",
+      "ACT": "0",
+      "LOC": "0",
+      "DIS": "2"
     },
     {
-      "BIRD_ID": "10",
-      "BIRD_ACT": "0",
-      "BIRD_LOC": "0",
-      "BIRD_DIS": "2"
+      "ID": "10",
+      "ACT": "0",
+      "LOC": "0",
+      "DIS": "2"
     },
     {
-      "BIRD_ID": "74",
-      "BIRD_ACT": "0",
-      "BIRD_LOC": "0",
-      "BIRD_DIS": "2"
+      "ID": "74",
+      "ACT": "0",
+      "LOC": "0",
+      "DIS": "2"
     }
   ],
-  "MAMMAL": [],
+  "MAMMALS": [],
   "DO": "6.833",
   "PH": "8.77",
   "N3": "7.83",
